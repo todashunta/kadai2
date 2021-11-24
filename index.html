@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/slider.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap" rel="stylesheet">
     <title>課題研究２</title>
 </head>
 
@@ -18,15 +24,27 @@
         </div>
         <menu>
             <div class="menu-bar">
-                <a href="#about">
-                    <p>About</p>
-                </a>
-                <a href="#goal">
-                    <p>Goal</p>
-                </a>
-                <a href="#story">
-                    <p>Story</p>
-                </a>
+                <div>
+                    <a href="index.html">
+                        <p>Home</p>
+                        <div class="home-menu">
+                            <a href="#about">
+                                <p>About</p>
+                            </a>
+                            <a href="#goal">
+                                <p>Goal</p>
+                            </a>
+                            <a href="#story">
+                                <p>Story</p>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="info.html">
+                        <p>Info</p>
+                    </a>
+                </div>
             </div>
         </menu>
     </header>
@@ -65,13 +83,27 @@
         </div>
     </div>
     <div class="main">
-        <div class="sec-1">
-            <h2>About</h2>
-            <p>
-                texttexttexttexttex<br>ttexttexttexttexttexttexttextte<br>xttexttexttextte<br>xttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-            </p>
+        <div class="content-frames">
+            <div id="goal">
+                <h2>Goal</h2>
+                <h3>全課題クリア！</h3>
+                <img src="image/kadai.png" alt="goal">
+            </div>
+        </div>
+        <div class="content-frames">
+            <div id="story">
+                <h2>Story</h2>
+                <h3>全課題クリア！</h3>
+                <img src="image/kadai.png" alt="goal">
+            </div>
         </div>
     </div>
+    <footer>
+        <p>愛知総合工科高等学校 電子情報科 課題研究 SIer班 <span class="sumihara">住原組</span></p>
+        <p>created by Shunta Toda</p>
+    </footer>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

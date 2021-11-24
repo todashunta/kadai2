@@ -1,0 +1,14 @@
+footer{
+    font-size: 20px;
+    background: linear-gradient(to top, #7ba3e7, white);
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sumihara{
+    font-size: 50px;
+    font-family: 'Yuji Boku', serif;
+}

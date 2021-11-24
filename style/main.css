@@ -1,0 +1,27 @@
+.content-frames{
+    width: 900px;
+    margin: 100px auto 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 7px inset #839cf0;
+    box-shadow: 0px 0px 20px #00000078;
+}
+
+.content-frames:not(:first-child){
+    margin-top: 200px;
+}
+
+.content-frames div{
+    position: relative;
+}
+
+.content-frames div h2 {
+    position: absolute;
+    color: #ffb91b;
+    top: -140px;
+    font-size: 45px;
+    text-shadow: 3px 3px 0px #c73e3e;
+}
+
