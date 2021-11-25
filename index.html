@@ -11,45 +11,44 @@
     <link rel="stylesheet" href="style/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://css.gg/chevron-left.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap" rel="stylesheet">
+    <link href='https://css.gg/chevron-right.css' rel='stylesheet'>
     <title>課題研究２</title>
 </head>
 
 <body>
-    <header>
+    <header id="header">
+        <div class="menu-cover" @click="coverclick"></div>
         <div class="h1">
             <img src="image/logo.png" alt="logo">
             <h1>課題研究 SIer班</h1>
             <p class="FA"><span>F</span>actory <span>A</span>utomation</p>
         </div>
-        <menu>
-            <div class="menu-bar">
-                <div>
-                    <a href="index.html">
-                        <p>Home</p>
-                        <div class="home-menu">
-                            <a href="#about">
-                                <p>About</p>
-                            </a>
-                            <a href="#goal">
-                                <p>Goal</p>
-                            </a>
-                            <a href="#story">
-                                <p>Story</p>
-                            </a>
-                        </div>
-                    </a>
-                </div>
-                <div>
-                    <a href="info.html">
-                        <p>Info</p>
-                    </a>
+        <div class="menu-bar">
+            <div class="bar-item">
+                <h4 @click="homeClick">Home</h4>
+                <div class="home-menu menu" @click="homeClick" v-if="homeMenu">
+                    <a href="#">Top</a>
+                    <a href="#about">About</a>
+                    <a href="#goal">Goal</a>
+                    <a href="#story">Story</a>
                 </div>
             </div>
-        </menu>
+            <div class="bar-item">
+                <h4 @click="infoClick">Info</h4>
+                <div class="info-menu menu" @click="homeClick" v-if="infoMenu">
+                    <a href="#about">About</a>
+                    <a href="#goal">Goal</a>
+                    <a href="#story">Story</a>
+                </div>
+            </div>
+        </div>
     </header>
-    <div class="slider-frame">
+    <div class="slider-frame" id="slider">
         <div class="slide-back-bar"></div>
+        <div class="next" @click="nextSlide"><i class="gg-chevron-right"></i></div>
+        <div class="back" @click="backSlide"><i class="gg-chevron-left"></i></div>
         <div class="slider">
             <div class="slides">
                 <input type="radio" name="slider-radio" id="radio1" checked>
@@ -73,18 +72,18 @@
                     <img src="image/slider/image5.jpg" alt="">
                 </div>
                 <div class="slider-select">
-                    <label for="radio1" id="label1"></label>
-                    <label for="radio2" id="label2"></label>
-                    <label for="radio3" id="label3"></label>
-                    <label for="radio4" id="label4"></label>
-                    <label for="radio5" id="label5"></label>
+                    <label for="radio1" id="label1" @click="selectSlide"></label>
+                    <label for="radio2" id="label2" @click="selectSlide"></label>
+                    <label for="radio3" id="label3" @click="selectSlide"></label>
+                    <label for="radio4" id="label4" @click="selectSlide"></label>
+                    <label for="radio5" id="label5" @click="selectSlide"></label>
                 </div>
             </div>
         </div>
     </div>
     <div class="main">
-        <div class="content-frames">
-            <div id="goal">
+        <div class="content-frames" id="goal">
+            <div>
                 <h2>Goal</h2>
                 <h3>全課題クリア！</h3>
                 <img src="image/kadai.png" alt="goal">
@@ -103,7 +102,8 @@
         <p>created by Shunta Toda</p>
     </footer>
     <script src="https://unpkg.com/vue@next"></script>
-    <script src="script.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 
 </html>

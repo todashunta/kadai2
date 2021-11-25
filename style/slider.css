@@ -103,7 +103,48 @@ input[type="radio"]{
     transition: .5s ease;
 }
 
+.next,
+.back{
+    opacity: 0;
+    position: absolute;
+    height: 100px;
+    width: 50px;
+    background: #d6d6d64c;
+    z-index: 500;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.next i,
+.back i{
+    height: 40px;
+    width: 40px;
+}
+
+
+.next i::after,
+.back i::after{
+    height: 30px;
+    width: 30px;
+}
+
+
+.slider-frame:hover .next,
+.slider-frame:hover .back{
+    opacity: 1;
+}
+
+.next{
+    right: 0;
+}
+
+.back{
+    left: 0;
+}
 
 @media (max-width: 1000px){
     .slider {

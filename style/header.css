@@ -2,7 +2,9 @@
   font-family: 'sumihara';
   src: url('fonts/Yujiboku-Regular.ttf');
 }
-
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     margin: 0;
@@ -61,47 +63,79 @@ menu{
     justify-content: space-around;
     border-bottom: 3px solid #1237bf;
 }
-.menu-bar > div{
+
+.bar-item{
     position: relative;
-    margin: 0 50px;
+    transition: all .2s;
+    font-size: 1.3rem;
+    margin: 0;
+    flex: 1;
 }
-.menu-bar > div > a {
+
+.bar-item:not(:first-child){
+    border-left: 3px solid #1237bf;
+}
+.bar-item h4{
     position: relative;
     flex: 1;
     text-align: center;
     padding-bottom: 10px;
     text-decoration: none;
     color: orange;
-    font-weight: bold;
-}
-.menu-bar > div > a:not(:last-child){
-    border-right: 3px solid #1237bf;
-}
-.menu-bar > div{
-    transition: all .2s;
-    font-size: 1.3rem;
     margin: 0;
+    font-weight: bold;
+    cursor: pointer;
 }
-.menu-bar > div::before{
+.bar-item::before{
     content: '';
     width: 0;
     height: 5px;
-    background: rgb(255, 138, 59);
+    background: #ff8a3b;
     position: absolute;
-    left: 40%;
-    bottom: 0px;
+    bottom:10px;
     transition: .2s cubic-bezier(0, 0, 0.37, 0.96);
+    left: 40%;
 }
 .menu-bar > div:hover::before{
-    width: 100%;
+    width:20%;
 }
 
-.home-menu{
+.menu{
     position: absolute;
     top: 50px;
     z-index: 999;
     background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translate(-50%);
+    left: 50%;
+    width: 50%;
+    border: 3px solid #1237bf;
+}
+
+.menu a{
+    text-align: center;
     width: 100%;
+    text-decoration: none;
+    padding: 10px 0;
+    color: white;
+    font-weight: 600;
+    background: #20337ddc;
+}
+.menu a:not(:first-child){
+    border-top: 3px solid #ff8a3b;
+}
+.menu a:hover{
+    background: #20337d7b;
+    text-decoration: none;
+}
+
+.menu-cover{
+    position: fixed;
+    width: 100%;
+    z-index: 800;
 }
 
 @media (max-width: 1000px){
