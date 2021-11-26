@@ -2,6 +2,7 @@
   font-family: 'sumihara';
   src: url('fonts/Yujiboku-Regular.ttf');
 }
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&display=swap');
 html{
     scroll-behavior: smooth;
 }
@@ -12,6 +13,7 @@ body{
     overflow-x: hidden;
     background: rgb(255, 255, 255);
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .main{
