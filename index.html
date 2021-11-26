@@ -14,14 +14,14 @@
     <link href='https://css.gg/chevron-left.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap" rel="stylesheet">
     <link href='https://css.gg/chevron-right.css' rel='stylesheet'>
-    <title>課題研究２</title>
+    <title>課題研究 SIer班</title>
 </head>
 
 <body>
     <header id="header">
         <div class="menu-cover" @click="coverclick"></div>
         <div class="h1">
-            <img src="image/logo.png" alt="logo">
+            <!-- <img src="image/logo.png" alt="logo"> -->
             <h1>課題研究 SIer班</h1>
             <p class="FA"><span>F</span>actory <span>A</span>utomation</p>
         </div>
@@ -65,14 +65,37 @@
     <div class="main">
         <div class="content-frames" id="about">
             <div>
-                <h2>SIerとは</h2>
+                <h2>SIerと大会について</h2>
                 <div class="content-block">
                     <h3>SIerとは</h3>
                     <p>ソフトウェアの設計や周辺機器などのシステムの構築、運用、保守、コンサルティングなど様々なことを顧客のニーズに合わせて行う職業。</p>
                 </div>
                 <div class="content-block">
-                    <h3>今大会について</h3>
-                    <p>今大会では、来年度から行われる競技会に向けたトライアル大会としてSIerの仕事を知り、理解を深めるためにFAロボットを使って課題をこなした。ニーズに合わせて行う職業。</p>
+                    <h3>大会について</h3>
+                    <p>今大会では、来年度から行われる競技会に向けたトライアル大会としてSIerの仕事を知り、理解を深めるためにFA ロボットを使って課題をクリアする。</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>参加高校</th>
+                                <th>使用ロボット</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>愛知総合工科高等学校</td>
+                                <td>FUJI SmartWing</td>
+                            <tr>
+                                <td>半田工科高等学校</td>
+                                <td>デンソーウェーブ</td>
+                            </tr>
+                            <tr>
+                                <td>春日井工科高等学校</td>
+                                <td>三菱電機</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4>課題一覧</h4>
+                    <img src="image/kadai.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -80,34 +103,42 @@
             <div>
                 <h2>Goal</h2>
                 <h3>全課題クリア！</h3>
-                <table>
-                    <colgroup>
-                        <col style="background-color: #0f0">
-                        <col span="2">
-                    </colgroup>
-                    <tr>
-                        <td>テーマ</td>
-                        <td>お菓子の箱詰め（チロルチョコ）</td>
-                    </tr>
-                    <tr>
-                        <td>基礎課題</td>
-                        <td>無作為に置かれた1種類のお菓子を画 像認識し、トレーの所定の位置に4個配置する</td>
-                    </tr>
-                </table>
-                <img src="image/kadai.png" alt="goal">
+                <h4>テーマ</h4>
+                <p>お菓子の箱詰め（チロルチョコ）</p>
+                <h4>基礎課題</h4>
+                <p>無作為に置かれた１種類のお菓子を画像認識し、トレーの所定の位置に４箇所配置する</p>
+                <h4>応用課題</h4>
+                <p>難易度☆</p>
+                <ol>
+                    <li>運転の状態（運転中・停止中）、生産数、稼働時間をタッチパネルで確認できるようにしたい</li>
+                    <li>異常が発生した際など、タッチパネル操作でロボットを初期位置に戻せるようにしたい</li>
+                    <li>タッチパネルで箱詰めする個数を指定できるようにしたい</li>
+                </ol>
+                <p>難易度☆☆</p>
+                <ol>
+                    <li>作業工程全体にかかる時間を基礎課題の状態から10%短くしたい</li>
+                    <li>指定されたワーク以外が供給された場合は、破棄するようにしたい</li>
+                </ol>
+                <p>難易度☆☆☆</p>
+                <ol>
+                    <li>タッチパネルでお菓子の種類を指定し、 任意のお菓子セットを作れるようにしたい</li>
+                </ol>
             </div>
         </div>
         <div class="content-frames">
             <div id="story">
                 <h2>Story</h2>
-                <h3>全課題クリア！</h3>
-                <img src="image/kadai.png" alt="goal">
             </div>
         </div>
     </div>
     <footer>
-        <p>愛知総合工科高等学校 電子情報科 課題研究 SIer班 <span class="sumihara">住原組</span></p>
-        <p>created by Shunta Toda</p>
+        <p>愛知総合工科高等学校</p>
+        <p>電子情報科 課題研究</p>
+        <p>SIer班 <span class="sumihara">住原組</span></p>
+        <p class="todashunta">created by Shunta Toda</p>
+        <div>
+            <a href=""><img src="image/icon/github.png" alt="" class="icon"></a>
+        </div>
     </footer>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="js/header.js"></script>

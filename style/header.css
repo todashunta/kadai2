@@ -19,7 +19,9 @@ body{
     display: flex;
     flex-direction: column;
 }
-
+header{
+    border-bottom: 5px double #20327d;
+}
 header .h1{
     display: flex;
     justify-content: space-between;
@@ -54,39 +56,6 @@ header .h1{
     color: red;
 }
 
-.menu-bar {
-    display: flex;
-    justify-content: space-around;
-    border-bottom: 3px solid #1237bf;
-}
-.menu-bar a {
-    position: relative;
-    text-decoration: none;
-    color: orange;
-    font-weight: 600;
-    font-size: 1.3rem;
-    flex: 1;
-    text-align: center;
-}
-.menu-bar a:not(:first-child){
-    border-left: 2px solid #1237bf;
-}
-
-.menu-bar a::after{
-    content: '';
-    position: absolute;
-    bottom: 3px;
-    left: 50%;
-    transform: translate(-50%);
-    width: 0;
-    height: 3px;
-    background: #ff8a3b;
-    transition: 0.2s;
-}
-
-.menu-bar a:hover::after{
-    width: 20%;
-}
 
 @media (max-width: 1000px){
     .slider {
