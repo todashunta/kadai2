@@ -29,6 +29,8 @@
     text-shadow: 3px 3px 0px #c73e3e;
 }
 
+
+
 @media (max-width: 1000px){
     .content-frames{
         width: 90%;
@@ -52,5 +54,11 @@
     top: -100px;
     font-size: 2rem;
     text-shadow: 3px 3px 0px #c73e3e;
+}
+.expend-img{
+    overflow: scroll;
+}
+.expend-img img:hover{
+    width: 300%;
 }
 }
