@@ -13,29 +13,72 @@
     margin-top: 200px;
 }
 
-.content-frames div{
+.content-frames > div{
     position: relative;
+    margin: 0 5px 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.content-frames div img{
-    width: 90%;
-}
+
 
 .content-frames div h2 {
     position: absolute;
     color: #ffb91b;
     top: -140px;
+    left: 0;
     font-size: 3rem;
-    text-shadow: 3px 3px 0px #c73e3e;
+    text-shadow: 2px 2px 0px #c73e3e;
+}
+
+.content-block h3{
+    color: rgb(255, 132, 0);
+    border-bottom: 3px dashed rgba(0, 145, 255, 0.624);
+    width: 60%;
+}
+
+.expend-img{
+    overflow: scroll;
+    position: relative;
+    text-align: center;
+}
+
+.expend-img p{
+    font-size: .5rem;
+    text-align: start;
+}
+.close-img{
+    position: relative;
+}
+.close-btn{
+    position: absolute;
+    right: 10px;
+    top: -30px;
+    width: 30px;
 }
 
 
+/* SIerと大会について */
+.contest table{
+    border-collapse: collapse;
+}
+.contest table th,
+.contest table td{
+    border: 2px solid orange;
+    padding: 5px;
+}
+
+.kadai{
+    width: 100%;
+}
 
 @media (max-width: 1000px){
     .content-frames{
         width: 90%;
     }
-    .content-frames div img{
+    .content-frames > div > img{
         width: 90%;
     }
     
@@ -44,7 +87,7 @@
 .content-frames{
     width: 90%;
 }
-.content-frames div img{
+.kadai{
     width: 90%;
 }
 .content-frames:not(:first-child){
@@ -52,13 +95,6 @@
 }
 .content-frames div h2 {
     top: -100px;
-    font-size: 2rem;
-    text-shadow: 3px 3px 0px #c73e3e;
-}
-.expend-img{
-    overflow: scroll;
-}
-.expend-img img:hover{
-    width: 250%;
+    font-size: 1.7rem;
 }
 }

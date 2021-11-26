@@ -62,7 +62,7 @@
             </div>
         </div>
     </div>
-    <div class="main">
+    <div class="main" id="main">
         <div class="content-frames" id="about">
             <div>
                 <h2>SIerと大会について</h2>
@@ -70,7 +70,7 @@
                     <h3>SIerとは</h3>
                     <p>ソフトウェアの設計や周辺機器などのシステムの構築、運用、保守、コンサルティングなど様々なことを顧客のニーズに合わせて行う職業。</p>
                 </div>
-                <div class="content-block">
+                <div class="content-block contest">
                     <h3>大会について</h3>
                     <p>今大会では、来年度から行われる競技会に向けたトライアル大会としてSIerの仕事を知り、理解を深めるためにFA ロボットを使って課題をクリアする。</p>
                     <table>
@@ -95,8 +95,10 @@
                         </tbody>
                     </table>
                     <h4>課題一覧</h4>
+                    <div class="close-img" v-if="imgExpend" @click="imgClick"><img src="image/icon/close.svg" alt="" class="close-btn"></div>
                     <div class="expend-img">
-                        <img src="image/kadai.jpg" alt="">
+                        <img class="kadai" src="image/kadai.jpg" alt="" @click="imgClick" :style="{width: imgWidth}">
+                        <p>拡大できます</p>
                     </div>
                 </div>
             </div>
@@ -145,6 +147,7 @@
     <script src="https://unpkg.com/vue@next"></script>
     <script src="js/header.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
