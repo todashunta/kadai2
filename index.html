@@ -38,19 +38,19 @@
                 <input type="radio" name="slider-radio" id="radio4">
                 <input type="radio" name="slider-radio" id="radio5">
                 <div class="item first" @touchstart="swipDown" @touchmove="swipMove" @touchend="swipUp">
-                    <img src="image/slider/image6.jpg" alt="">
+                    <img src="image/slider/image5.jpg" alt="">
                 </div>
                 <div class="item" @touchstart="swipDown" @touchmove="swipMove" @touchend="swipUp">
                     <img src="image/slider/image2.jpg" alt="">
                 </div>
                 <div class="item" @touchstart="swipDown" @touchmove="swipMove" @touchend="swipUp">
-                    <img src="image/slider/image3.jpg" alt="">
+                    <img src="image/slider/image1.jpg" alt="">
                 </div>
                 <div class="item" @touchstart="swipDown" @touchmove="swipMove" @touchend="swipUp">
                     <img src="image/slider/image4.jpg" alt="">
                 </div>
                 <div class="item" @touchstart="swipDown" @touchmove="swipMove" @touchend="swipUp">
-                    <img src="image/slider/image5.jpg" alt="">
+                    <img src="image/slider/image3.jpg" alt="">
                 </div>
                 <div class="slider-select">
                     <label for="radio1" id="label1" @click="selectSlide"></label>
@@ -106,32 +106,115 @@
         <div class="content-frames" id="goal">
             <div>
                 <h2>目標</h2>
-                <h3>全課題クリア！</h3>
-                <h4>テーマ</h4>
-                <p>お菓子の箱詰め（チロルチョコ）</p>
-                <h4>基礎課題</h4>
-                <p>無作為に置かれた１種類のお菓子を画像認識し、トレーの所定の位置に４箇所配置する</p>
-                <h4>応用課題</h4>
-                <p>難易度☆</p>
-                <ol>
-                    <li>運転の状態（運転中・停止中）、生産数、稼働時間をタッチパネルで確認できるようにしたい</li>
-                    <li>異常が発生した際など、タッチパネル操作でロボットを初期位置に戻せるようにしたい</li>
-                    <li>タッチパネルで箱詰めする個数を指定できるようにしたい</li>
-                </ol>
-                <p>難易度☆☆</p>
-                <ol>
-                    <li>作業工程全体にかかる時間を基礎課題の状態から10%短くしたい</li>
-                    <li>指定されたワーク以外が供給された場合は、破棄するようにしたい</li>
-                </ol>
-                <p>難易度☆☆☆</p>
-                <ol>
-                    <li>タッチパネルでお菓子の種類を指定し、 任意のお菓子セットを作れるようにしたい</li>
-                </ol>
+                <h3 class="clear">全課題クリア！</h3>
+                <div class="content-block">
+                    <h4>テーマ</h4>
+                    <p>お菓子（チロルチョコ）の箱詰め</p>
+                    <h4>基礎課題</h4>
+                    <p>無作為に置かれた１種類のお菓子を画像認識し、トレーの所定の位置に４箇所配置する</p>
+                    <h4>応用課題</h4>
+                    <p class="kadai-mode">難易度☆</p>
+                    <ol>
+                        <li>運転の状態（運転中・停止中）、生産数、稼働時間をタッチパネルで確認できるようにしたい</li>
+                        <li>異常が発生した際など、タッチパネル操作でロボットを初期位置に戻せるようにしたい</li>
+                        <li>タッチパネルで箱詰めする個数を指定できるようにしたい</li>
+                    </ol>
+                    <p class="kadai-mode">難易度☆☆</p>
+                    <ol>
+                        <li>作業工程全体にかかる時間を基礎課題の状態から10%短くしたい</li>
+                        <li>指定されたワーク以外が供給された場合は、破棄するようにしたい</li>
+                    </ol>
+                    <p class="kadai-mode">難易度☆☆☆</p>
+                    <ol>
+                        <li>タッチパネルでお菓子の種類を指定し、 任意のお菓子セットを作れるようにしたい</li>
+                    </ol>
+                </div>
             </div>
         </div>
         <div class="content-frames">
-            <div id="story">
-                <h2>Story</h2>
+            <div>
+                <h2>SmartWingについて</h2>
+                <div class="content-block">
+                    <h3>SmartWingとは</h3>
+                    <p>株式会社FUJIが作ったFAアームロボット</p>
+                    <p>作業内容を教え込むティーチング作業を不要とし、立ち上げが容易な小型多関節ロボット。スリムなアーム構造を実現し、細かい作業にも対応可能です。</p>
+                    <div class="hide-img" @click.self="hideImgDiv">
+                        <div class="hide-img-cover"><img src="image/icon/bottom_arrow.svg" alt=""></div>
+                        <img class="smartwing" src="image/smartwing/body.jpg" alt="" @click.self="hideImg">
+                    </div>
+                    <h3>大会用SmartWing搭載機能</h3>
+                    <ul>
+                        <li>ハンドカメラ</li>
+                        <li>グローバルカメラ</li>
+                        <li>PLC（Programmable Logic Controller）</li>
+                        <li>タッチパネル</li>
+                        <li>真空吸着ユニット</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="content-frames">
+            <div>
+                <h2>基本課題</h2>
+                <div class="content-block">
+                    <p>無作為に置かれたお菓子を画像認識して種類ごとにトレーに並べる</p>
+                    <div class="kihon-div">
+                        <video src="video/kihon.mp4"  controls muted class="video"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-frames">
+            <div>
+                <h2>応用課題</h2>
+                <div class="content-block">
+                    <p>タッチパネルでの操作、効率アップ、コンベア、種類指定、指定外を破棄</p>
+                    <div class="hide-img ouyou" @click.self="hideImgDiv">
+                        <div class="hide-img-cover"><img src="image/icon/bottom_arrow.svg" alt=""></div>
+                        <video src="video/konbea.mp4" controls muted @click.self="hideImg" class="video"></video>
+                        <img src="image/ouyou/touch.jpg" alt="" @click.self="hideImg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-frames">
+            <div>
+                <h2>企画書</h2>
+                <div class="content-block">
+                    <div class="risk">
+                        <img src="image/kikakusyo.jpg" alt="" @click="riskClick" :style="{width: riskWidth}">
+                        <img src="image/risk.jpg" alt=""  @click="riskClick" :style="{width: riskWidth}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-frames">
+            <div>
+                <h2>工夫</h2>
+                <div class="content-block">
+                    <ul>
+                        <li>3Dプリンターでパーツごとに部品を作り、組み合わせができるようにした</li>
+                        <li>夏にチロルチョコが溶け、使えなくなったためチョコの部分を3Dプリンターで作り溶けないようにした </li>
+                        <li>ロボットのプログラムで計算せずに、PLCで計算させ、プログラムを簡素化した</li>
+                        <li>もとのチロルは壁の近くが取れなかったが、底上げして取れるようにした </li>
+                        <li>ロボットのパレット計算が、もともと使っていた三菱だと4点ティーチングする必要があったが、SmartWingだと1点登録だけで計算で行うことができるのでそこの違いを踏まええたロボットの運用をした。</li>
+                        <li>コンベアの箱を供給する台は、MPS実習装置を参考に箱が１個ずつ供給できるようにした</li>
+                        <li>プログラムにコメントアウトを追加して、見ている人が何をしているか分かりやすくした。</li>
+                        <li>プログラムの10%短縮の課題では余分なプロセスやロボットの移動、動作を減らして高速化を目指した</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="content-frames">
+            <div>
+                <h2>感想</h2>
+                <div class="content-block">
+                    <ul>
+                        <li>正直ロボットに関するプログラムであったり、ロボット自体の操作だけしか学ぶことがないと思っていた。だけど実際はロボットをより上手く活用するための周辺装置を考案したり、3dプリンターを使ったりと様々なことを学んだり、逆に今までに付けてきた知識を活用することができた</li>
+                        <li>8月末までは全てにおいて進んでおらず間に合うかどうかすら分からなかったが、それ以降にしっかりと進めることができ、ラスト１ヶ月くらいでしっかりとスパートをかけ、応用課題まで終わらせることが出来たので良かった。</li>
+                        <li>時間がもっとあれば、ベルトコンベアをもっと使った作業をしたかった。</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -139,6 +222,28 @@
         <p>愛知総合工科高等学校</p>
         <p>電子情報科 課題研究</p>
         <p>SIer班 <span class="sumihara">住原組</span></p>
+        <div class="menber">
+            <div>
+                <p>プログラム・機体 作成</p>
+                <ul>
+                    <li>中野 吹雪</li>
+                    <li>長野 司</li>
+                    <li>野々山 颯真</li>
+                    <li>権田 風太郎</li>
+                    <li>戸田 駿太</li>
+                </ul>
+            </div>
+            <div>
+                <p>リスクアセスメントシート・企画書等 作成</p>
+                <ul>
+                    <li>堀田 奏大</li>
+                    <li>佐久間 領司</li>
+                    <li>後藤 優汰</li>
+                    <li>竹中 智尋</li>
+                    <li>安部 凜音</li>
+                </ul>
+            </div>
+        </div>
         <p class="todashunta">created by Shunta Toda</p>
         <div>
             <a href=""><img src="image/icon/github.png" alt="" class="icon"></a>
