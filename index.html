@@ -19,7 +19,7 @@
 
 <body>
     <header id="header">
-        <div class="menu-cover" @click="coverclick"></div>
+        <div class="menu-cover"></div>
         <div class="h1">
             <!-- <img src="image/logo.png" alt="logo"> -->
             <h1>課題研究 SIer班</h1>
@@ -139,7 +139,7 @@
                     <p>株式会社FUJIが作ったFAアームロボット</p>
                     <p>作業内容を教え込むティーチング作業を不要とし、立ち上げが容易な小型多関節ロボット。スリムなアーム構造を実現し、細かい作業にも対応可能です。</p>
                     <div class="hide-img" @click.self="hideImgDiv">
-                        <div class="hide-img-cover"><img src="image/icon/bottom_arrow.svg" alt=""></div>
+                        <div class="hide-img-cover"><img src="image/icon/bottom_arrow.svg" alt="" @click="hideIcon"></div>
                         <img class="smartwing" src="image/smartwing/body.jpg" alt="" @click.self="hideImg">
                     </div>
                     <h3>大会用SmartWing搭載機能</h3>
@@ -170,9 +170,9 @@
                 <div class="content-block">
                     <p>タッチパネルでの操作、効率アップ、コンベア、種類指定、指定外を破棄</p>
                     <div class="hide-img ouyou" @click.self="hideImgDiv">
-                        <div class="hide-img-cover"><img src="image/icon/bottom_arrow.svg" alt=""></div>
-                        <video src="video/konbea.mp4" controls muted @click.self="hideImg" class="video"></video>
+                        <div class="hide-img-cover"><img src="image/icon/bottom_arrow.svg" alt=""  @click.self="hideIcon"></div>
                         <img src="image/ouyou/touch.jpg" alt="" @click.self="hideImg">
+                        <video src="video/konbea.mp4" controls muted @click.self="hideImg" class="video"></video>
                     </div>
                 </div>
             </div>

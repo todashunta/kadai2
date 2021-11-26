@@ -41,6 +41,19 @@ const main = Vue.createApp({
                 }
             }
         },
+        hideIcon(e) {
+            console.log(e.target.parentNode.parentNode)
+            if (document.body.clientWidth <= 600) {
+                if (getComputedStyle(e.target.parentNode.parentNode).height == '100px') {
+                    e.target.parentNode.parentNode.style.height = 'auto'
+                    e.target.parentNode.style.display = 'none'
+                } else {
+                    e.target.parentNode.parentNode.style.height = '100px'
+                    e.target.parentNode.style.display = 'block'
+                }
+            }
+            
+        },
         riskClick() {
             this.riskExpend = !this.riskExpend
             if (this.riskExpend) {
