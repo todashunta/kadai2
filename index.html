@@ -25,25 +25,6 @@
             <h1>課題研究 SIer班</h1>
             <p class="FA"><span>F</span>actory <span>A</span>utomation</p>
         </div>
-        <div class="menu-bar">
-            <div class="bar-item">
-                <h4 @click="homeClick">Home</h4>
-                <div class="home-menu menu" @click="homeClick" v-if="homeMenu">
-                    <a href="#">Top</a>
-                    <a href="#about">About</a>
-                    <a href="#goal">Goal</a>
-                    <a href="#story">Story</a>
-                </div>
-            </div>
-            <div class="bar-item">
-                <h4 @click="infoClick">Info</h4>
-                <div class="info-menu menu" @click="homeClick" v-if="infoMenu">
-                    <a href="#about">About</a>
-                    <a href="#goal">Goal</a>
-                    <a href="#story">Story</a>
-                </div>
-            </div>
-        </div>
     </header>
     <div class="slider-frame" id="slider">
         <div class="slide-back-bar"></div>
@@ -56,19 +37,19 @@
                 <input type="radio" name="slider-radio" id="radio3">
                 <input type="radio" name="slider-radio" id="radio4">
                 <input type="radio" name="slider-radio" id="radio5">
-                <div class="item first">
+                <div class="item first" @touchstart="swipDown" @touchmove="swipMove" @touchend="swipUp">
                     <img src="image/slider/image6.jpg" alt="">
                 </div>
-                <div class="item">
+                <div class="item" @touchstart="swipDown" @touchmove="swipMove" @touchend="swipUp">
                     <img src="image/slider/image2.jpg" alt="">
                 </div>
-                <div class="item">
+                <div class="item" @touchstart="swipDown" @touchmove="swipMove" @touchend="swipUp">
                     <img src="image/slider/image3.jpg" alt="">
                 </div>
-                <div class="item">
+                <div class="item" @touchstart="swipDown" @touchmove="swipMove" @touchend="swipUp">
                     <img src="image/slider/image4.jpg" alt="">
                 </div>
-                <div class="item">
+                <div class="item" @touchstart="swipDown" @touchmove="swipMove" @touchend="swipUp">
                     <img src="image/slider/image5.jpg" alt="">
                 </div>
                 <div class="slider-select">
@@ -82,10 +63,37 @@
         </div>
     </div>
     <div class="main">
+        <div class="content-frames" id="about">
+            <div>
+                <h2>SIerとは</h2>
+                <div class="content-block">
+                    <h3>SIerとは</h3>
+                    <p>ソフトウェアの設計や周辺機器などのシステムの構築、運用、保守、コンサルティングなど様々なことを顧客のニーズに合わせて行う職業。</p>
+                </div>
+                <div class="content-block">
+                    <h3>今大会について</h3>
+                    <p>今大会では、来年度から行われる競技会に向けたトライアル大会としてSIerの仕事を知り、理解を深めるためにFAロボットを使って課題をこなした。ニーズに合わせて行う職業。</p>
+                </div>
+            </div>
+        </div>
         <div class="content-frames" id="goal">
             <div>
                 <h2>Goal</h2>
                 <h3>全課題クリア！</h3>
+                <table>
+                    <colgroup>
+                        <col style="background-color: #0f0">
+                        <col span="2">
+                    </colgroup>
+                    <tr>
+                        <td>テーマ</td>
+                        <td>お菓子の箱詰め（チロルチョコ）</td>
+                    </tr>
+                    <tr>
+                        <td>基礎課題</td>
+                        <td>無作為に置かれた1種類のお菓子を画 像認識し、トレーの所定の位置に4個配置する</td>
+                    </tr>
+                </table>
                 <img src="image/kadai.png" alt="goal">
             </div>
         </div>
