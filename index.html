@@ -22,8 +22,9 @@
         <div class="menu-cover"></div>
         <div class="h1">
             <!-- <img src="image/logo.png" alt="logo"> -->
+            <a class="sougoukouka" href="https://aichi-te.aichi-c.ed.jp/"><img src="image/sougoukouka.png" alt=""></a>
             <h1>課題研究 SIer班</h1>
-            <p class="FA"><span>F</span>actory <span>A</span>utomation</p>
+            <!-- <p class="FA"><span>F</span>actory <span>A</span>utomation</p> -->
         </div>
     </header>
     <div class="slider-frame" id="slider">
@@ -95,7 +96,8 @@
                         </tbody>
                     </table>
                     <h4>課題一覧</h4>
-                    <div class="close-img" v-if="imgExpend" @click="imgClick"><img src="image/icon/close.svg" alt="" class="close-btn"></div>
+                    <div class="close-img" v-if="imgExpend" @click="imgClick"><img src="image/icon/close.svg" alt=""
+                            class="close-btn"></div>
                     <div class="expend-img">
                         <img class="kadai" src="image/kadai.jpg" alt="" @click="imgClick" :style="{width: imgWidth}">
                         <p>拡大できます</p>
@@ -139,7 +141,8 @@
                     <p>株式会社FUJIが作ったFAアームロボット</p>
                     <p>作業内容を教え込むティーチング作業を不要とし、立ち上げが容易な小型多関節ロボット。スリムなアーム構造を実現し、細かい作業にも対応可能です。</p>
                     <div class="hide-img" @click.self="hideImgDiv">
-                        <div class="hide-img-cover"><img src="image/icon/bottom_arrow.svg" alt="" @click="hideIcon"></div>
+                        <div class="hide-img-cover"><img src="image/icon/bottom_arrow.svg" alt="" @click="hideIcon">
+                        </div>
                         <img class="smartwing" src="image/smartwing/body.jpg" alt="" @click.self="hideImg">
                     </div>
                     <h3>大会用SmartWing搭載機能</h3>
@@ -159,7 +162,7 @@
                 <div class="content-block">
                     <p>無作為に置かれたお菓子を画像認識して種類ごとにトレーに並べる</p>
                     <div class="kihon-div">
-                        <video src="video/kihon.mp4"  controls muted class="video"></video>
+                        <video src="video/kihon.mp4" controls muted class="video"></video>
                     </div>
                 </div>
             </div>
@@ -170,7 +173,8 @@
                 <div class="content-block">
                     <p>タッチパネルでの操作、効率アップ、コンベア、種類指定、指定外を破棄</p>
                     <div class="hide-img ouyou" @click.self="hideImgDiv">
-                        <div class="hide-img-cover"><img src="image/icon/bottom_arrow.svg" alt=""  @click.self="hideIcon"></div>
+                        <div class="hide-img-cover"><img src="image/icon/bottom_arrow.svg" alt=""
+                                @click.self="hideIcon"></div>
                         <img src="image/ouyou/touch.jpg" alt="" @click.self="hideImg">
                         <video src="video/konbea.mp4" controls muted @click.self="hideImg" class="video"></video>
                     </div>
@@ -183,7 +187,7 @@
                 <div class="content-block">
                     <div class="risk">
                         <img src="image/kikakusyo.jpg" alt="" @click="riskClick" :style="{width: riskWidth}">
-                        <img src="image/risk.jpg" alt=""  @click="riskClick" :style="{width: riskWidth}">
+                        <img src="image/risk.jpg" alt="" @click="riskClick" :style="{width: riskWidth}">
                     </div>
                 </div>
             </div>
@@ -197,7 +201,8 @@
                         <li>夏にチロルチョコが溶け、使えなくなったためチョコの部分を3Dプリンターで作り溶けないようにした </li>
                         <li>ロボットのプログラムで計算せずに、PLCで計算させ、プログラムを簡素化した</li>
                         <li>もとのチロルは壁の近くが取れなかったが、底上げして取れるようにした </li>
-                        <li>ロボットのパレット計算が、もともと使っていた三菱だと4点ティーチングする必要があったが、SmartWingだと1点登録だけで計算で行うことができるのでそこの違いを踏まええたロボットの運用をした。</li>
+                        <li>ロボットのパレット計算が、もともと使っていた三菱だと4点ティーチングする必要があったが、SmartWingだと1点登録だけで計算で行うことができるのでそこの違いを踏まええたロボットの運用をした。
+                        </li>
                         <li>コンベアの箱を供給する台は、MPS実習装置を参考に箱が１個ずつ供給できるようにした</li>
                         <li>プログラムにコメントアウトを追加して、見ている人が何をしているか分かりやすくした。</li>
                         <li>プログラムの10%短縮の課題では余分なプロセスやロボットの移動、動作を減らして高速化を目指した</li>
@@ -210,8 +215,10 @@
                 <h2>感想</h2>
                 <div class="content-block">
                     <ul>
-                        <li>正直ロボットに関するプログラムであったり、ロボット自体の操作だけしか学ぶことがないと思っていた。だけど実際はロボットをより上手く活用するための周辺装置を考案したり、3dプリンターを使ったりと様々なことを学んだり、逆に今までに付けてきた知識を活用することができた</li>
-                        <li>8月末までは全てにおいて進んでおらず間に合うかどうかすら分からなかったが、それ以降にしっかりと進めることができ、ラスト１ヶ月くらいでしっかりとスパートをかけ、応用課題まで終わらせることが出来たので良かった。</li>
+                        <li>正直ロボットに関するプログラムであったり、ロボット自体の操作だけしか学ぶことがないと思っていた。だけど実際はロボットをより上手く活用するための周辺装置を考案したり、3dプリンターを使ったりと様々なことを学んだり、逆に今までに付けてきた知識を活用することができた
+                        </li>
+                        <li>8月末までは全てにおいて進んでおらず間に合うかどうかすら分からなかったが、それ以降にしっかりと進めることができ、ラスト１ヶ月くらいでしっかりとスパートをかけ、応用課題まで終わらせることが出来たので良かった。
+                        </li>
                         <li>時間がもっとあれば、ベルトコンベアをもっと使った作業をしたかった。</li>
                     </ul>
                 </div>
