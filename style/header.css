@@ -41,9 +41,6 @@ header .h1{
 }
 
 .h1 .icon{
-    padding-left: 100px;
-    height: 50px;
-    width: 250px;
     margin: auto 0 auto 0;
     flex: 0;
     pointer-events: none;
@@ -70,14 +67,17 @@ header .h1{
     color: red;
 }
 
+.icon{
+    height: 10%;
+    width: 10%;
+}
 
 @media (max-width: 1000px){
     .slider {
         width: 90%;
     }
     .h1 .icon {
-        padding-left: 50px;
-        height: 40px;
+        padding-left: 10px;
     }
     .h1 h1 {
         font-size: 1.5rem;
@@ -100,7 +100,6 @@ header .h1{
     }
     .h1 .icon {
         padding-left: 10px;
-        height: 30px;
     }
     .h1 h1 {
         font-size: 1rem;
